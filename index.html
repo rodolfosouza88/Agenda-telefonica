@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>Agenda de contatos</title>
+</head>
+
+<body>
+    <div class="main-content">
+        <header>
+            <h1>Agenda de Contatos</h1>
+            <img src="/img/pink-agenda.png" alt="">
+        </header>
+
+        <main>
+            <form id="form-agenda">
+                <input id="nome" type="text" required placeholder="Nome">
+                <input id="telefone" type="tel" required placeholder="(xx) 9xxxx-xxxx" 
+                pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Por favor, insira um número de telefone válido no formato (xx) 9xxxx-xxxx" oninput="formatarTelefone(this)">
+
+                <button type="submit">Adicionar</button>
+            </form>
+
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Ações</th> <!-- Novo cabeçalho para a coluna de ações -->
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><h3>Contatos Salvos</h3></td>
+                    <td id="nome-salvo">---</td>
+                    <td id="telefone-salvo">---</td>
+                </tr>
+            </tfoot>
+        </main>
+
+
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
